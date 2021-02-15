@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  bonhams-django:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    command: python manage.py runserver 0:8000
+
